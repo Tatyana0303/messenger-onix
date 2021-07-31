@@ -14,11 +14,7 @@ struct Message {
     var toId: String?
     
     func chatPartnerId() -> String? {
-        if self.fromId == Auth.auth().currentUser?.uid {
-            return toId
-        } else {
-            return fromId
-        }
+        return fromId
     }
 }
 

@@ -27,19 +27,6 @@ struct UserProvider {
         }
     }
     
-    // MARK: - Fetch user
-    
-    func fetchUser(completion: @escaping (User?) -> Void) {
-        Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                let user = User(id: snapshot.key, name: dictionary["name"] as? String)
-                completion(user)
-            } else {
-                completion(nil)
-            }
-        }, withCancel: nil)
-    }
-    
     // MARK: - Fetch users
     
     func fetchUsers(completion: @escaping ([User]?) -> Void) {

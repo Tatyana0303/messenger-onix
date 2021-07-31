@@ -19,6 +19,38 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yne-Y1-uxy">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="5Kn-OY-g8S">
+                                    <rect key="frame" x="0.0" y="166.00000034679067" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9D-4L-mbo">
+                                            <rect key="frame" x="334" y="0.0" width="80" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="QEO-eh-2J8"/>
+                                            </constraints>
+                                            <state key="normal" title="Send"/>
+                                            <connections>
+                                                <action selector="sendTapped:" destination="GXL-Go-rf2" eventType="touchUpInside" id="LL8-IP-DYC"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTd-NT-9c3">
+                                            <rect key="frame" x="10" y="0.0" width="324" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="29F-DX-SSs"/>
+                                        <constraint firstAttribute="bottom" secondItem="L9D-4L-mbo" secondAttribute="bottom" id="51i-YX-g70"/>
+                                        <constraint firstAttribute="trailing" secondItem="L9D-4L-mbo" secondAttribute="trailing" id="5fq-F4-aRu"/>
+                                        <constraint firstItem="L9D-4L-mbo" firstAttribute="top" secondItem="5Kn-OY-g8S" secondAttribute="top" id="6qj-kw-SzI"/>
+                                        <constraint firstItem="lTd-NT-9c3" firstAttribute="leading" secondItem="5Kn-OY-g8S" secondAttribute="leading" constant="10" id="AlT-fL-40f"/>
+                                        <constraint firstItem="lTd-NT-9c3" firstAttribute="top" secondItem="5Kn-OY-g8S" secondAttribute="top" id="OtG-AX-Xvw"/>
+                                        <constraint firstAttribute="bottom" secondItem="lTd-NT-9c3" secondAttribute="bottom" id="if4-jT-IYR"/>
+                                        <constraint firstItem="L9D-4L-mbo" firstAttribute="leading" secondItem="lTd-NT-9c3" secondAttribute="trailing" id="ueh-y4-GUu"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" id="Wbh-md-aLX" customClass="UserTableViewCell" customModule="MessagerOnixApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="58.5"/>
@@ -102,47 +134,13 @@
                                     <outlet property="delegate" destination="GXL-Go-rf2" id="tJu-WU-kgy"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Kn-OY-g8S">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9D-4L-mbo">
-                                        <rect key="frame" x="334" y="0.0" width="80" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="QEO-eh-2J8"/>
-                                        </constraints>
-                                        <state key="normal" title="Send"/>
-                                        <connections>
-                                            <action selector="sendTapped:" destination="GXL-Go-rf2" eventType="touchUpInside" id="LL8-IP-DYC"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTd-NT-9c3">
-                                        <rect key="frame" x="10" y="0.0" width="324" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="29F-DX-SSs"/>
-                                    <constraint firstAttribute="bottom" secondItem="L9D-4L-mbo" secondAttribute="bottom" id="51i-YX-g70"/>
-                                    <constraint firstAttribute="trailing" secondItem="L9D-4L-mbo" secondAttribute="trailing" id="5fq-F4-aRu"/>
-                                    <constraint firstItem="L9D-4L-mbo" firstAttribute="top" secondItem="5Kn-OY-g8S" secondAttribute="top" id="6qj-kw-SzI"/>
-                                    <constraint firstItem="lTd-NT-9c3" firstAttribute="leading" secondItem="5Kn-OY-g8S" secondAttribute="leading" constant="10" id="AlT-fL-40f"/>
-                                    <constraint firstItem="lTd-NT-9c3" firstAttribute="top" secondItem="5Kn-OY-g8S" secondAttribute="top" id="OtG-AX-Xvw"/>
-                                    <constraint firstAttribute="bottom" secondItem="lTd-NT-9c3" secondAttribute="bottom" id="if4-jT-IYR"/>
-                                    <constraint firstItem="L9D-4L-mbo" firstAttribute="leading" secondItem="lTd-NT-9c3" secondAttribute="trailing" id="ueh-y4-GUu"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P9m-Pe-hQU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yne-Y1-uxy" secondAttribute="bottom" id="22G-it-Kuv"/>
-                            <constraint firstItem="P9m-Pe-hQU" firstAttribute="trailing" secondItem="5Kn-OY-g8S" secondAttribute="trailing" id="9cR-49-QCU"/>
                             <constraint firstAttribute="trailing" secondItem="yne-Y1-uxy" secondAttribute="trailing" id="dnx-ZX-9Xb"/>
-                            <constraint firstItem="P9m-Pe-hQU" firstAttribute="bottom" secondItem="5Kn-OY-g8S" secondAttribute="bottom" id="fdk-pc-2Gr"/>
                             <constraint firstItem="yne-Y1-uxy" firstAttribute="top" secondItem="P9m-Pe-hQU" secondAttribute="top" id="lf3-ff-FmT"/>
-                            <constraint firstItem="5Kn-OY-g8S" firstAttribute="leading" secondItem="P9m-Pe-hQU" secondAttribute="leading" id="qSB-RN-yan"/>
                             <constraint firstItem="yne-Y1-uxy" firstAttribute="leading" secondItem="P9m-Pe-hQU" secondAttribute="leading" id="zRT-wY-EKI"/>
                         </constraints>
                     </view>

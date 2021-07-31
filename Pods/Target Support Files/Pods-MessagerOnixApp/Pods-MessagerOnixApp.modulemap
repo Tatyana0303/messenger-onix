@@ -1,0 +1,6 @@
+framework module Pods_MessagerOnixApp {
+  umbrella header "Pods-MessagerOnixApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>284442922331-s9qetnl1re7m77l555n1me86iclck4ps.apps.googleusercontent.com</string>
+	<key>DATABASE_URL</key>
+	<string>https://messengeronixapp-default-rtdb.firebaseio.com/</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.284442922331-s9qetnl1re7m77l555n1me86iclck4ps</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBwPG-cgZWBlugUte-hPlJSull4EIl_La8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>284442922331</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tania.MessagerOnixApp</string>
+	<key>PROJECT_ID</key>
+	<string>messengeronixapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>messengeronixapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:284442922331:ios:a940253b58d6b0dcc69e7e</string>
+</dict>
+</plist>

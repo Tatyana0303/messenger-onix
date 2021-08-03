@@ -36,19 +36,21 @@ class MessagesViewController: UIViewController {
     private func observeMessages() {
         guard let userID = self.user?.id else { return }
         let userMessagesRef = Database.database().reference().child("user-messages").child(userID)
-        userMessagesRef.observe(.childAdded, with: { (snapshot) in
+        userMessagesRef.observe(.childAdded, with: { [weak self] (snapshot) in
             let messageId = snapshot.key
             let messageRef = Database.database().reference().child("messages").child(messageId)
-            messageRef.observe(.value, with: { (snap) in
+            messageRef.observe(.value, with: { [weak self] (snap) in
                 if let dictionary = snap.value as? [String : AnyObject] {
                     let message = Message(fromId: dictionary["fromId"] as? String,
                                           timestamp: dictionary["timestamp"] as? NSNumber,
                                           text: dictionary["text"] as? String,
-                                          toId: dictionary["toId"] as? String)                    
-                    self.messages.append(message)
+                                          toId: dictionary["toId"] as? String)
+                    if self?.companion?.id == dictionary["toId"] as? String || self?.companion?.id == dictionary["fromId"] as? String {
+                        self?.messages.append(message)
+                    }
                     DispatchQueue.global(qos: .userInteractive).async {
                         DispatchQueue.main.async {
-                            self.tableView?.reloadData()
+                            self?.tableView?.reloadData()
                         }
                     }
                     
